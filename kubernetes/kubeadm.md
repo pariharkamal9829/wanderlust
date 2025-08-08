@@ -10,7 +10,7 @@ sudo su
 ```bash
 sudo apt-get update
 ```
-
+### this should run after all step in last when worker node joined master not before that other wise their and too much complexity in conternaid and calico cni so i prefer to do at last other wise you get too much time wastage.
 - <i> Installing Docker </i>
 ```bash
 sudo apt install docker.io -y
