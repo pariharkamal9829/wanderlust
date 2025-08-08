@@ -1,4 +1,4 @@
-##  Setup Kubernetes [Kubeadm] Cluster (Version: 1.29)
+<img width="959" height="535" alt="image" src="https://github.com/user-attachments/assets/86014037-63dc-4b45-b108-7e96718f27a4" />##  Setup Kubernetes [Kubeadm] Cluster (Version: 1.29)
 
 ### On both master & worker nodes
 - <i>  Become root user </i>
@@ -78,7 +78,8 @@ sudo systemctl start kubelet
 ```bash
 sudo kubeadm config images pull
 
-sudo kubeadm init
+sudo kubeadm init --cri-socket=unix:///var/run/containerd/containerd.sock
+# containerd is the default and recommended runtime for Kubernetes from v1.24 onwards.
 
 mkdir -p "$HOME"/.kube
 sudo cp -i /etc/kubernetes/admin.conf "$HOME"/.kube/config
